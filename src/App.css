@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+.left {
+     width: 60%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: white;
+     font-size: 24px;
+     background: top right no-repeat,
+          linear-gradient(
+               59deg,
+               rgb(24, 116, 55) 20%,
+               rgb(36, 8, 197) 35%,
+               rgb(23, 24, 24) 90%
+          );
+     background-blend-mode: soft-light;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+     width: 100%;
+     margin: auto;
+     display: flex;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right {
+     width: 40%;
+     background-color: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.grid-container {
+     /* border: 1px solid black; */
+     padding: 20px;
+     width: 100%;
+     height: 100vh;
+     display: grid;
+     grid-template-columns: 40% 60%;
+     grid-template-rows: 250px 200px ;
+     grid-template-areas:
+          "box1 box2"
+          "box3 box3"
+          "box4 box4";
+     gap: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.bellIcon {
+     /* border: 1px solid red; */
+     position: absolute;
+     left: 5px;
+     top: 5px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box1 {
+     /* border: 1px solid green; */
+     grid-area: box1;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+}
+.box2 {
+     /* border: 1px solid red; */
+     grid-area: box2;
+}
+.box3 {
+     /* border: 1px solid red; */
+     grid-area: box3;
+}
+.box4 {
+     /* border: 1px solid red; */
+     grid-area: box4;
 }
